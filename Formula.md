@@ -101,3 +101,7 @@ CASE
   WHEN DateField IS NOT NULL THEN "Completed"
   ELSE "Not Completed"
 END
+
+
+SUM(IIF(Booking_intimation = "correct" AND Booking_intimation <> TODAY() AND Booking_intimation = ".", 1, 0))
+
