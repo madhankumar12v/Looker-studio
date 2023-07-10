@@ -124,4 +124,9 @@ CASE
   WHEN DateField IS NOT NULL THEN "Completed"
   ELSE "Not Completed"
 END
+```
+#### Jurney date One day before condition
 
+```
+IF(status = "False" AND journey_date = DATE(YEAR(TODAY()), MONTH(TODAY()), DAY(TODAY()) - 1), "pending", NULL)
+```
