@@ -115,3 +115,70 @@ CASE
   ELSE NULL
 END
 ```
+
+```
+CASE
+  WHEN hp!="Paid" and Journey date=TODAY() THEN 'Today'
+  WHEN hp!="Paid" and Journey date<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN tp!="Paid" and Return date=TODAY() THEN 'Today'
+  WHEN tp!="Paid" and Return date<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN cp!="Paid" and Journey date=TODAY() THEN 'Today'
+  WHEN cp!="Paid" and Journey date<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN Bus/train/flight = 'Yes' and Entry Date=TODAY() THEN 'Today'
+  WHEN Bus/train/flight = 'Yes' and Entry Date<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN Rev ed end="FALSE" and Return date=DATE(YEAR(TODAY()), MONTH(TODAY()), DAY(TODAY()) - 1) THEN 'Today'
+  WHEN Rev ed end="FALSE" and Return date<DATE(YEAR(TODAY()), MONTH(TODAY()), DAY(TODAY()) - 1) THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN  CV1 is null and D 1=TODAY() THEN 'Today'
+  WHEN  CV1 is null and D 1<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN  CV2 is null and D 2=TODAY() THEN 'Today'
+  WHEN  CV2 is null and D 2<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+```
+CASE
+  WHEN  CV3 is null and D 3=TODAY() THEN 'Today'
+  WHEN  CV3 is null and D 3<TODAY() THEN 'Overdue'
+  ELSE NULL
+END
+```
+
+
+
